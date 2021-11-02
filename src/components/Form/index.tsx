@@ -285,7 +285,6 @@ const Form = React.forwardRef<any, FormProps>(
 )
 
 export {
-  Form,
   Text,
   File,
   Field,

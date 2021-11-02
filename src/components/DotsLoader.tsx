@@ -30,31 +30,33 @@ const DotsLoader = ({
   color = '#6e4850'
 }: DotsLoaderProps) => {
   const loadingContainer = {
+    width: size,
     height: size,
     display: 'flex',
     alignItems: 'center',
     className: 'DotsLoader',
-    justifyContent: 'space-around',
-    width: size
+    justifyContent: 'space-around'
   }
 
   const loadingCircle = {
-    display: 'block',
-    borderRadius: '50%',
     width: dotSize,
     height: dotSize,
+    display: 'block',
+    borderRadius: '50%',
     backgroundColor: color
   }
   return (
     <motion.div
       animate='end'
       initial='start'
-      className='DotsLoader'
       variants={loading}
+      className='DotsLoader'
       style={loadingContainer}
     >
       <motion.span style={loadingCircle} variants={circle} />
+
       <motion.span style={loadingCircle} variants={circle} />
+
       <motion.span style={loadingCircle} variants={circle} />
     </motion.div>
   )
